@@ -1,0 +1,44 @@
+@use "variables" as v;
+
+@mixin mobile {
+  @media (min-width: v.$mobile) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop) {
+    @content;
+  }
+}
+
+@mixin inputs {
+  font-family: v.$fontFamily;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid v.$Lightgrayishviolet;
+
+  &:focus {
+    outline: v.$Verydarkviolet solid 1px;
+  }
+
+  &::placeholder {
+    color: v.$Lightgrayishviolet;
+    font-family: v.$fontFamily;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+  }
+}
+
+@mixin positonDesktop {
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  left: 50%;
+  right: 2rem;
+  transform: translateY(-80%);
+}

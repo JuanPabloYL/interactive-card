@@ -1,0 +1,97 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.info {
+  margin-top: 10rem;
+  &.none {
+    display: none;
+  }
+
+  @include m.desktop {
+    @include m.positonDesktop;
+  }
+
+  &__space {
+    color: v.$Verydarkviolet;
+    label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.2rem;
+      margin-block: 1rem;
+    }
+
+    input {
+      margin-bottom: 1rem;
+      @include m.inputs;
+
+      /* Chrome, Safari, Edge, Opera */
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+  }
+
+  &__date {
+    margin-top: 1rem;
+    color: v.$Verydarkviolet;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+
+    p {
+      position: absolute;
+      bottom: -1rem;
+    }
+
+    label {
+      font-size: 1.2rem;
+    }
+    input {
+      @include m.inputs;
+    }
+  }
+
+  &__space-birth {
+    grid-column: 1 / 4;
+  }
+
+  &__space-year {
+    grid-column: 4 / 6;
+  }
+
+  &__space-cvc {
+    grid-column: 6 / -1;
+  }
+
+  &__btn {
+    margin-top: 3rem;
+
+    button {
+      cursor: pointer;
+      border-radius: 1rem;
+      font-family: v.$fontFamily;
+      font-size: 2rem;
+      width: 100%;
+      border: none;
+      margin-top: -0.5rem;
+      margin-bottom: 5rem;
+      background-color: v.$Verydarkviolet;
+      color: v.$white;
+      padding-block: 2rem;
+
+      @include m.desktop {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

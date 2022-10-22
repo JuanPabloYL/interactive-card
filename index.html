@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+
+    <title>Interactive Card</title>
+    <script defer src="src/js/app.js"></script>
+  </head>
+  <body>
+    <div class="cards">
+      <div class="cards__card">
+        <img class="cards__img" src="build/img/bg-main-mobile.png" alt="card" />
+      </div>
+
+      <div class="cards__card">
+        <img class="cards__img" src="build/img/bg-card-back.png" alt="card" />
+      </div>
+
+      <div class="cards__card cards__card--credit">
+        <div class="cards__logo">
+          <img src="build/img/card-logo.svg" alt="logo" />
+        </div>
+        <div class="cards__content">
+          <p class="cards__num">
+            <span>0000</span>
+            <span>0000</span>
+            <span>0000</span>
+            <span>0000</span>
+          </p>
+          <div class="cards__box">
+            <p class="cards__name">jane apllessed</p>
+            <p class="cards__date">00/00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="info container">
+      <form class="info__form">
+        <div class="info__space">
+          <label for="username">Cardholder name</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="e.g. Jane Aplessed"
+          />
+        </div>
+
+        <div class="info__space">
+          <label for="card-name">Card number</label>
+          <input
+            type="text"
+            id="card-name"
+            name="card"
+            placeholder="e.g. 1234 5678 9101 1121"
+          />
+        </div>
+
+        <div class="info__date">
+          <div class="info__space info__space-birth">
+            <label for="birth">Exp date</label>
+            <input type="number" id="birth" name="birth" placeholder="MM" />
+          </div>
+
+          <div class="info__space info__space-year">
+            <label for="year">(MM/YY)</label>
+            <input type="number" id="year" name="year" placeholder="YY" />
+          </div>
+
+          <div class="info__space info__space-cvc">
+            <label for="cvc">cvc</label>
+            <input type="number" id="cvc" name="cvc" placeholder="e.g. 123" />
+          </div>
+        </div>
+
+        <div class="info__btn">
+          <button id="btn-submit" type="submit">Confirm</button>
+        </div>
+      </form>
+    </main>
+
+    <section class="success container none">
+      <div class="success__icon">
+        <img src="build/img/icon-complete.svg" alt="icon" />
+      </div>
+      <div class="success__content">
+        <h2 class="success__heading">Thank you!</h2>
+        <p class="success__text">We've added your card details</p>
+      </div>
+      <div class="info__btn">
+        <button id="btn-continue" type="submit">Continue</button>
+      </div>
+    </section>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Juan Pablo Yagüe</a>.
+    </div> -->
+  </body>
+</html>

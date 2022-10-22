@@ -1,0 +1,29 @@
+@use "variables" as v;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -5px;
+}
+
+body {
+  font-family: v.$fontFamily;
+  font-size: v.$fontSize;
+  background-color: v.$white;
+
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: min(90%, 120rem);
+  margin-inline: auto;
+}

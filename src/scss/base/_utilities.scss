@@ -1,0 +1,11 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.error {
+  outline: 1px solid v.$red;
+}
+
+.error-msg {
+  color: v.$red;
+  font-size: 1rem;
+}
